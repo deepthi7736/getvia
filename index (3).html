@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Getvia — Discover businesses worth knowing</title>
+<meta name="description" content="Getvia is a premium business discovery platform. Find trusted, verified local businesses — and follow the route to your next favorite place." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============ ROUTE (signature element) ============ -->
+<svg class="route" id="route" viewBox="0 0 4 3000" preserveAspectRatio="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="routeGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7C6CFF" />
+      <stop offset="50%" stop-color="#4FD8EA" />
+      <stop offset="100%" stop-color="#FFB454" />
+    </linearGradient>
+  </defs>
+  <path id="routePath" d="M2,0 C2,300 2,300 2,600 C2,900 2,900 2,1200 C2,1500 2,1500 2,1800 C2,2100 2,2100 2,2400 C2,2700 2,2700 2,3000" />
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__mark" href="#top" aria-label="Getvia home">
+      <span class="nav__pin" aria-hidden="true"></span>
+      <span class="nav__word">Getvia</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#categories">Categories</a>
+      <a href="#locations">Locations</a>
+      <a href="#trending">Trending</a>
+      <a href="#owners">For business owners</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a class="btn btn--ghost" href="#owners">List your business</a>
+      <a class="btn btn--primary magnetic" href="#search">
+        <span>Start exploring</span>
+      </a>
+    </div>
+
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="nav__mobile" id="navMobile">
+    <a href="#categories">Categories</a>
+    <a href="#locations">Locations</a>
+    <a href="#trending">Trending</a>
+    <a href="#owners">For business owners</a>
+    <a class="btn btn--primary" href="#search">Start exploring</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__aurora" aria-hidden="true"></div>
+
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow" data-reveal>
+          <span class="eyebrow__pin"></span> 01 · THE ROUTE STARTS HERE
+        </p>
+
+        <h1 class="hero__headline" data-reveal>
+          Every great place<br />
+          started as <em>someone's</em><br />
+          <em>discovery.</em>
+        </h1>
+
+        <p class="hero__sub" data-reveal>
+          Getvia is where verified local businesses meet people who are actually
+          looking for them — no clutter, no noise, just the good ones.
+        </p>
+
+        <form class="search" id="search" data-reveal>
+          <span class="search__pin" aria-hidden="true"></span>
+          <input
+            type="text"
+            id="searchInput"
+            class="search__input"
+            placeholder=""
+            aria-label="Search businesses"
+          />
+          <button type="button" class="search__voice" aria-label="Search by voice">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Z" stroke="currentColor" stroke-width="1.6"/><path d="M19 11a7 7 0 0 1-14 0M12 18v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+          <button type="submit" class="btn btn--primary search__submit">Search</button>
+        </form>
+
+        <div class="chips" data-reveal>
+          <span class="chips__label">Trending nearby</span>
+          <button class="chip">Cafés open now</button>
+          <button class="chip">Top-rated salons</button>
+          <button class="chip">Emergency electricians</button>
+        </div>
+      </div>
+
+      <div class="hero__pinboard" aria-hidden="true">
+        <div class="pin-card pin-card--1" data-depth="0.6">
+          <div class="pin-card__cover" style="--c1:#7C6CFF;--c2:#4FD8EA">☕</div>
+          <div class="pin-card__body">
+            <span class="badge badge--verified">Verified</span>
+            <p class="pin-card__name">North Light Café</p>
+            <p class="pin-card__meta">4.9 ★ · 0.4 km</p>
+          </div>
+        </div>
+
+        <div class="pin-card pin-card--2" data-depth="1">
+          <div class="pin-card__cover" style="--c1:#FFB454;--c2:#7C6CFF">✂️</div>
+          <div class="pin-card__body">
+            <span class="badge badge--featured">Featured</span>
+            <p class="pin-card__name">Studio Marrow</p>
+            <p class="pin-card__meta">4.8 ★ · 1.1 km</p>
+          </div>
+        </div>
+
+        <div class="pin-card pin-card--3" data-depth="0.4">
+          <div class="pin-card__cover" style="--c1:#4FD8EA;--c2:#FFB454">🔧</div>
+          <div class="pin-card__body">
+            <span class="badge badge--premium">Premium</span>
+            <p class="pin-card__name">Torque &amp; Tools</p>
+            <p class="pin-card__meta">4.7 ★ · Open now</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUSTED BY ============ -->
+  <section class="trusted">
+    <p class="trusted__label">Trusted by people discovering, and businesses being discovered</p>
+    <div class="marquee">
+      <div class="marquee__track">
+        <span>10,000+ verified listings</span>
+        <span>·</span>
+        <span>240 cities</span>
+        <span>·</span>
+        <span>2.1M monthly searches</span>
+        <span>·</span>
+        <span>98% response rate</span>
+        <span>·</span>
+        <span>4.8 average rating</span>
+        <span>·</span>
+        <span>10,000+ verified listings</span>
+        <span>·</span>
+        <span>240 cities</span>
+        <span>·</span>
+        <span>2.1M monthly searches</span>
+        <span>·</span>
+        <span>98% response rate</span>
+        <span>·</span>
+        <span>4.8 average rating</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED ============ -->
+  <section class="section" id="featured">
+    <div class="section__head" data-reveal>
+      <p class="eyebrow"><span class="eyebrow__pin"></span> 02 · FEATURED</p>
+      <h2>Places the route always leads back to</h2>
+      <p class="section__sub">Hand-verified businesses with a track record people keep coming back for.</p>
+    </div>
+
+    <div class="card-grid" id="featuredGrid" data-reveal-group></div>
+  </section>
+
+  <!-- ============ CATEGORIES ============ -->
+  <section class="section section--tint" id="categories">
+    <div class="section__head" data-reveal>
+      <p class="eyebrow"><span class="eyebrow__pin"></span> 03 · CATEGORIES</p>
+      <h2>Wherever you're headed, there's a way in</h2>
+    </div>
+
+    <div class="cat-grid" data-reveal-group>
+      <button class="cat-card"><span class="cat-card__icon">🍽️</span>Food &amp; Dining<em>1,240 places</em></button>
+      <button class="cat-card"><span class="cat-card__icon">💇</span>Beauty &amp; Wellness<em>860 places</em></button>
+      <button class="cat-card"><span class="cat-card__icon">🔧</span>Home Services<em>1,510 places</em></button>
+      <button class="cat-card"><span class="cat-card__icon">🏥</span>Health &amp; Medical<em>640 places</em></button>
+      <button class="cat-card"><span class="cat-card__icon">🛍️</span>Shopping<em>920 places</em></button>
+      <button class="cat-card"><span class="cat-card__icon">🎓</span>Education<em>410 places</em></button>
+      <button class="cat-card"><span class="cat-card__icon">🚗</span>Automotive<em>530 places</em></button>
+      <button class="cat-card"><span class="cat-card__icon">🎉</span>Events<em>270 places</em></button>
+    </div>
+  </section>
+
+  <!-- ============ LOCATIONS ============ -->
+  <section class="section" id="locations">
+    <div class="section__head" data-reveal>
+      <p class="eyebrow"><span class="eyebrow__pin"></span> 04 · EXPLORE BY LOCATION</p>
+      <h2>Pick a point on the map, start the route</h2>
+    </div>
+
+    <div class="location-panel" data-reveal>
+      <div class="location-map" aria-hidden="true">
+        <span class="location-dot" style="top:28%; left:22%"></span>
+        <span class="location-dot location-dot--big" style="top:46%; left:52%"></span>
+        <span class="location-dot" style="top:64%; left:34%"></span>
+        <span class="location-dot" style="top:38%; left:74%"></span>
+        <span class="location-dot" style="top:72%; left:66%"></span>
+      </div>
+      <ul class="location-list">
+        <li><button>Kochi <em>1,860 listings</em></button></li>
+        <li><button>Bengaluru <em>4,210 listings</em></button></li>
+        <li><button>Chennai <em>3,040 listings</em></button></li>
+        <li><button>Hyderabad <em>2,750 listings</em></button></li>
+        <li><button>Mumbai <em>5,120 listings</em></button></li>
+        <li><button>Delhi NCR <em>4,980 listings</em></button></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ TRENDING ============ -->
+  <section class="section section--tint" id="trending">
+    <div class="section__head" data-reveal>
+      <p class="eyebrow"><span class="eyebrow__pin"></span> 05 · TRENDING NOW</p>
+      <h2>What the route is buzzing about this week</h2>
+    </div>
+
+    <div class="scroll-row" id="trendingRow" data-reveal-group></div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section" id="reviews">
+    <div class="section__head" data-reveal>
+      <p class="eyebrow"><span class="eyebrow__pin"></span> 06 · CUSTOMER REVIEWS</p>
+      <h2>People who followed the route</h2>
+    </div>
+
+    <div class="testimonial" data-reveal>
+      <button class="testimonial__nav testimonial__nav--prev" id="tPrev" aria-label="Previous review">‹</button>
+      <div class="testimonial__track" id="testimonialTrack">
+        <blockquote class="testimonial__slide">
+          <p>Found a plumber who actually showed up on time, with a rating history I could trust. Getvia felt less like a directory and more like a recommendation from a friend.</p>
+          <cite>Ananya R. — Bengaluru</cite>
+        </blockquote>
+        <blockquote class="testimonial__slide">
+          <p>As a small studio owner, our profile finally looks like the brand we actually are — not a listing buried in a wall of ads.</p>
+          <cite>Studio Marrow — Business Owner</cite>
+        </blockquote>
+        <blockquote class="testimonial__slide">
+          <p>The search actually understands what I mean. Typed "quiet café to work from" and it delivered exactly that.</p>
+          <cite>Devika M. — Kochi</cite>
+        </blockquote>
+      </div>
+      <button class="testimonial__nav testimonial__nav--next" id="tNext" aria-label="Next review">›</button>
+      <div class="testimonial__dots" id="testimonialDots"></div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES / OWNERS ============ -->
+  <section class="section section--tint" id="owners">
+    <div class="section__head" data-reveal>
+      <p class="eyebrow"><span class="eyebrow__pin"></span> 07 · BUILT FOR BOTH SIDES</p>
+      <h2>A platform that respects the searcher and the shown</h2>
+    </div>
+
+    <div class="bento" data-reveal-group>
+      <article class="bento__item bento__item--wide">
+        <h3>Verification that means something</h3>
+        <p>Every listing is checked by hand before it's marked Verified — not just paid for.</p>
+      </article>
+      <article class="bento__item">
+        <h3>No pay-to-rank</h3>
+        <p>Search results are earned by rating and relevance, never by ad spend.</p>
+      </article>
+      <article class="bento__item">
+        <h3>Direct to WhatsApp</h3>
+        <p>Message a business in one tap, no forms, no middleman.</p>
+      </article>
+      <article class="bento__item">
+        <h3>Real analytics for owners</h3>
+        <p>See exactly who's finding you, from where, and searching for what.</p>
+      </article>
+      <article class="bento__item bento__item--wide">
+        <h3>A profile worth sharing</h3>
+        <p>Business pages built to feel like a portfolio, not a form submission — galleries, offers, hours, and reviews in one clean page.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="section stats">
+    <div class="stats__grid" data-reveal-group>
+      <div class="stat">
+        <span class="stat__num" data-count="10400">0</span><span class="stat__plus">+</span>
+        <p>Verified businesses</p>
+      </div>
+      <div class="stat">
+        <span class="stat__num" data-count="240">0</span>
+        <p>Cities covered</p>
+      </div>
+      <div class="stat">
+        <span class="stat__num" data-count="2100000">0</span>
+        <p>Monthly searches</p>
+      </div>
+      <div class="stat">
+        <span class="stat__num" data-count="98">0</span><span class="stat__plus">%</span>
+        <p>Average response rate</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq">
+    <div class="section__head" data-reveal>
+      <p class="eyebrow"><span class="eyebrow__pin"></span> 08 · QUESTIONS</p>
+      <h2>Before you set off</h2>
+    </div>
+
+    <div class="faq" data-reveal>
+      <div class="faq__item">
+        <button class="faq__q">Is listing my business free? <span>+</span></button>
+        <div class="faq__a"><p>Yes — a standard profile is free. Featured and Premium placements are optional upgrades for businesses that want extra visibility.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q">How does verification work? <span>+</span></button>
+        <div class="faq__a"><p>We confirm ownership, location, and basic documentation before a business is marked Verified — it isn't automatic and it isn't for sale.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q">Can I message a business directly? <span>+</span></button>
+        <div class="faq__a"><p>Yes, through WhatsApp or in-app chat, straight from the profile page — no forms in between.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q">Does Getvia work outside major cities? <span>+</span></button>
+        <div class="faq__a"><p>We're live in 240+ cities and adding new ones every month based on where searches are coming from.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="finale" id="finaleCta">
+    <div class="hero__aurora hero__aurora--finale" aria-hidden="true"></div>
+    <p class="eyebrow"><span class="eyebrow__pin"></span> 09 · YOU'VE ARRIVED</p>
+    <h2>Your next favorite place<br />is already on the route.</h2>
+    <div class="finale__actions">
+      <a href="#search" class="btn btn--primary btn--lg magnetic">Start exploring</a>
+      <a href="#owners" class="btn btn--ghost btn--lg">List your business</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand">
+      <span class="nav__pin" aria-hidden="true"></span>
+      <span class="nav__word">Getvia</span>
+      <p>The route to businesses worth knowing.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Discover</h4>
+      <a href="#featured">Featured</a>
+      <a href="#categories">Categories</a>
+      <a href="#locations">Locations</a>
+      <a href="#trending">Trending</a>
+    </div>
+    <div class="footer__col">
+      <h4>Business</h4>
+      <a href="#owners">List your business</a>
+      <a href="#owners">Pricing</a>
+      <a href="#owners">Analytics</a>
+    </div>
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="#top">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#top">Contact</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© <span id="year"></span> Getvia. All rights reserved.</p>
+    <div class="footer__legal">
+      <a href="#top">Privacy</a>
+      <a href="#top">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
