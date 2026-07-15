@@ -186,14 +186,25 @@
     </div>
 
     <div class="cat-grid" data-reveal-group>
-      <button class="cat-card"><span class="cat-card__icon">🍽️</span>Food &amp; Dining<em>1,240 places</em></button>
-      <button class="cat-card"><span class="cat-card__icon">💇</span>Beauty &amp; Wellness<em>860 places</em></button>
-      <button class="cat-card"><span class="cat-card__icon">🔧</span>Home Services<em>1,510 places</em></button>
-      <button class="cat-card"><span class="cat-card__icon">🏥</span>Health &amp; Medical<em>640 places</em></button>
-      <button class="cat-card"><span class="cat-card__icon">🛍️</span>Shopping<em>920 places</em></button>
-      <button class="cat-card"><span class="cat-card__icon">🎓</span>Education<em>410 places</em></button>
-      <button class="cat-card"><span class="cat-card__icon">🚗</span>Automotive<em>530 places</em></button>
-      <button class="cat-card"><span class="cat-card__icon">🎉</span>Events<em>270 places</em></button>
+      <button class="cat-card" data-category="food"><span class="cat-card__icon">🍽️</span>Food &amp; Dining<em>1,240 places</em></button>
+      <button class="cat-card" data-category="beauty"><span class="cat-card__icon">💇</span>Beauty &amp; Wellness<em>860 places</em></button>
+      <button class="cat-card" data-category="home"><span class="cat-card__icon">🔧</span>Home Services<em>1,510 places</em></button>
+      <button class="cat-card" data-category="health"><span class="cat-card__icon">🏥</span>Health &amp; Medical<em>640 places</em></button>
+      <button class="cat-card" data-category="shopping"><span class="cat-card__icon">🛍️</span>Shopping<em>920 places</em></button>
+      <button class="cat-card" data-category="education"><span class="cat-card__icon">🎓</span>Education<em>410 places</em></button>
+      <button class="cat-card" data-category="automotive"><span class="cat-card__icon">🚗</span>Automotive<em>530 places</em></button>
+      <button class="cat-card" data-category="events"><span class="cat-card__icon">🎉</span>Events<em>270 places</em></button>
+    </div>
+
+    <!-- ============ CATEGORIES DETAIL EXPANSION ============ -->
+    <div class="cat-detail" id="catDetailPanel" aria-expanded="false">
+      <div class="cat-detail__head">
+        <h3 id="catDetailTitle">Food &amp; Dining</h3>
+        <p id="catDetailSubtitle">Top-rated local favorites worth a visit</p>
+      </div>
+      <div class="cat-detail__grid" id="catDetailGrid">
+        <!-- Dynamic card list will be injected here -->
+      </div>
     </div>
   </section>
 
@@ -394,3 +405,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
